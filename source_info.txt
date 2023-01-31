@@ -1,0 +1,21 @@
+Image: docker pull quay.io/cloudservices/xjoin-es-exporter:f621527
+Manifest Layers
+Link: https://quay.io/repository/cloudservices/xjoin-es-exporter/manifest/sha256:e952735be33e877ebc7de725f99ae86a8222ca2cd081fca5f88d39242047f54b
+
+>_ /bin/sh
+
+    ENTRYPOINT  ["/bin/elasticsearch_exporter"]
+
+    EXPOSE      9114
+
+    COPY        file:2d1f489570e8de3fbd31c996ff242fbdaaff201c3c6e84b60ff88a020f13f56d in /bin/elasticsearch_exporter
+
+    MAINTAINER  The Prometheus Authors <prometheus-developers@googlegroups.com>
+
+    COPY        dir:b1c1c3c551755544b818d03ad9136b137ca12c48393ba5cdd58d7f845647e042 in /
+
+    MAINTAINER  The Prometheus Authors <prometheus-developers@googlegroups.com>
+
+    CMD         ["sh"]
+
+    ADD file:b265aa0ea2ef7ff1f4a3e087217e75aca2c90f5c345406299664cc7969b2b28e in /
