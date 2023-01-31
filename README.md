@@ -1,1 +1,4 @@
 # xjoin-es-exporter
+This project provides a `xjoin-es-exporter` image based on ubi8/ubi-minimal to fulfill Red Hat's security compliance. The `elasticsearch_exporter` in this project was copied from quay.io/cloudservices/xjoin-es-exporter:f621527 because the Dockerfile or the source project producing this image is unknown.  The `xjoin-es-exporter:f621527` image was built 3 years ago and the SECURITY SCAN at quay.io shows this image:tag as `Unsupported`, the ubi-minimal based image shows one "medium" vulnerability which has a fix available in "0:2.9.7-15.el8_7.1"
+
+If `elasticsearch_exporter` requires an update in future, then try rebuilding it using https://github.com/prometheus-community/elasticsearch_exporter/ as this is the closest match discovered.
